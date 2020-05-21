@@ -1,0 +1,33 @@
+{
+  "name": "management-system",
+  "version": "1.0.0",
+  "description": "vue全家桶 + element-ui 开发管理系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --open",
+    "build": "webpack --config webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mynameliushen/management-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mynameliushen/management-system/issues"
+  },
+  "homepage": "https://github.com/mynameliushen/management-system#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
