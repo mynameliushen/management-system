@@ -1,6 +1,6 @@
 <template>
-  <div>
-    login
+  <div class="login">
+    123
   </div>
 </template>
 
@@ -8,5 +8,8 @@
 export default {
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
+.login{
+  color: red;
+}
 </style>

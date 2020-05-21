@@ -12,3 +12,12 @@ npm i html-webpack-plugin clean-webpack-plugin webpack-dev-server vue-loader vue
 
 # add router
 npm i vue-router vuex axios -S
+
+npm i node-sass sass-loader -S
+
+npm i element-ui -S
+
+npm i babel-loader @babel/core babel-preset-env -D
+npm i babel-loader babel-core babel-preset-env -D
+
+npm i file-loader -D // 因为element-ui有字体
