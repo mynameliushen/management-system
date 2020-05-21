@@ -1,12 +1,24 @@
+import Layout from '@/layout'
 
 const routes  = [
   {
-    path: '/',
+    path: '/login',
     component: () => import('@/view/login/index')
   },
   {
-    path: '/dashboard',
-    component: () => import('@/view/dashboard/index')
+    path: '/',
+    component: Layout,
+    redirect: '/dashboard',
+    children: [
+      {
+        path: '/dashboard',
+        component: () => import('@/view/dashboard/index')
+      },
+      {
+        path: '/charts',
+        component: () => import('@/view/charts/index')
+      }
+    ]
   }
 ]
 

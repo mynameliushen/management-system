@@ -21,3 +21,14 @@ npm i babel-loader @babel/core babel-preset-env -D
 npm i babel-loader babel-core babel-preset-env -D
 
 npm i file-loader -D // 因为element-ui有字体
+
+# create login
+npm i vuex -S
+
+npm i nprogress -S 进度条
+
+npm i js-cookie
+
+### mock数据
+
+npm install webpack-api-mocker --save-dev

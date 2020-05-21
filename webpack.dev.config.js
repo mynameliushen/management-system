@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const webpackMock = require('webpack-api-mocker')
 
 module.exports = {
   mode: 'development',
@@ -11,8 +12,11 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname,'dist'),
-    hot: true
+    contentBase: path.join(__dirname, 'dist'),
+    hot: true,
+    before(app) {
+      webpackMock(app, path.resolve(__dirname, 'mock/index.js'))
+    }
   },
   module: {
     rules: [
@@ -46,7 +50,6 @@ module.exports = {
       }
     ]
   },
-  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname,'public/index.html')
@@ -58,7 +61,8 @@ module.exports = {
     extensions: ['.js','.vue'], // 省略 import './App.vue' 的后缀名
     alias: {
       '@': path.join(__dirname, 'src'),
-      'common': path.join(__dirname, 'src/common')
+      'common': path.join(__dirname, 'src/common'),
+      'api': path.join(__dirname, 'src/api/')
     }
   }
 }
